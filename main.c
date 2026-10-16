@@ -6,7 +6,7 @@ typedef struct {
     char patente[10];
     char marca[30];
     char tipo;
-    int año;
+    int anio;
     double precio;
     bool disponible;
 } Auto;
@@ -71,13 +71,13 @@ void agregarAuto(void) {
     } while (autoActual.tipo != 'A' && autoActual.tipo != 'C');
 
     do {
-        printf("Ingrese el año: ");
-        if (scanf("%d", &autoActual.año) != 1) {
-            printf("Año invalido.\n");
+        printf("Ingrese el anio: ");
+        if (scanf("%d", &autoActual.anio) != 1) {
+            printf("Anio invalido.\n");
             return;
 
 }
-    } while (autoActual.año <= 0);
+    } while (autoActual.anio <= 0);
 
     do {
         printf("Ingrese el precio: ");
@@ -115,7 +115,7 @@ void agregarAuto(void) {
         autoActual.patente,
         autoActual.marca,
         autoActual.tipo,
-        autoActual.año,
+        autoActual.anio,
         autoActual.precio,
         autoActual.disponible
     );
