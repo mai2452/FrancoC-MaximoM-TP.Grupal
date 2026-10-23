@@ -99,6 +99,10 @@ void agregarAuto(void) {
 
         // Cambio de caracter (a -> A), para validacion correcta
         autoActual.tipo = toupper(autoActual.tipo);
+
+        if (autoActual.tipo != 'A' && autoActual.tipo != 'C') {
+            printf("Tipo invalido. Ingrese A o C.\n");
+        }
     } while (autoActual.tipo != 'A' && autoActual.tipo != 'C');
 
     do {
@@ -106,6 +110,7 @@ void agregarAuto(void) {
 
         if (scanf("%d", &autoActual.anio) != 1) {
             printf("Anio invalido.\n");
+            while(getchar() != '\n');
             return;
         }
 
@@ -120,6 +125,7 @@ void agregarAuto(void) {
 
         if (scanf("%lf", &autoActual.precio) != 1) {
             printf("Precio invalido.\n");
+            while(getchar() != '\n');
             return;
         }
 
@@ -127,13 +133,14 @@ void agregarAuto(void) {
             printf("El precio no puede ser negativo.\n");
         }
 
-    } while (!(autoActual.precio >= 0));
+    } while (autoActual.precio < 0);
 
     do {
         printf("Disponible (1 = Si / 0 = No): ");
 
         if (scanf("%d", &disponible) != 1) {
             printf("Dato invalido.\n");
+            while(getchar() != '\n');
             return;
         }
 
@@ -268,6 +275,7 @@ void buscarAuto(){
 
     if (scanf("%7s", patenteBuscar) != 1) {
         printf("Patente invalida.\n");
+        while(getchar() != '\n');
         return;
     }
 
