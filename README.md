@@ -74,5 +74,6 @@ Usamos fopen para abrir los archivos, fprintf para escribir, fscanf para leer y 
 - Al ingresar A o C para elegir el tipo de vehículo, se aceptan también minúsculas ya que se vuelven mayúsculas. 
 - Ingresar 1 o 0 para indicar la disponibilidad.
 - Al momento de buscar un vehículo, se escribe la patente con las mismas mayúsculas y minúsculas con las que se guardó.
+- Al momento de buscar un vehículo, se debe escribir la patente respetando las mismas mayúsculas y minúsculas con las que se guardó. Por ejemplo, si la patente es AB123CD, se debe buscar como AB123CD y no como ab123cd, AB123cd etc.
 - El programa controla algunos datos, que el año sea positivo, el precio no sea negativo y las opciones de disponibilidad.
 - No es posible modificar ni eliminar autos ya cargados y se puede guardar una patente repetida.
